@@ -85,8 +85,9 @@ right to use. A third-party download needs the person's yes with the file name, 
 - A room tone or a continuous bed under everything.
 - An accent tied to a word on every punchline and every cut that matters: at least two per ten seconds.
 - At least three cuts per ten seconds, cut on words. The punch is a close-up.
-- Use real file names. List `audio-lib/music` and `audio-lib/sfx` and pick from what is there (the kit: `stamp-low`, `scratch-stop`, `womp`, `ping-soft`,
-  `whoosh-air`, `error-buzz`, `chime-up`, `sparkle-dust`, `claps-small`, `key-tap`, `ba-dum-tss`, `bulb-hum`, `lofi-bed.mp3`, `amb-morning-fan-long.wav`).
+- Use real file names. List `audio-lib/music` and `audio-lib/sfx` and pick from what is there (the code-made kit: `stamp-low`, `scratch-stop`, `womp`, `ping-soft`,
+  `whoosh-air`, `error-buzz`, `chime-up`, `sparkle-dust`, `claps-small`, `key-tap`, `ba-dum-tss`, `bulb-hum`, `lofi-bed.mp3`, `amb-morning-fan-long.wav`;
+  plus the series' ElevenLabs effects and `*-long.mp3` room tones, each described in `SOURCES.json`).
   `new_episode.py` writes kit files as placeholders (`lofi-bed.mp3`, `amb-morning-fan-long.wav`, `scratch-stop.mp3`): choose the right ones for the story.
 - More sounds: `python tools/synth_sounds.py` rewrites the free kit; `python tools/sfx.py <name>.mp3 "<plain description>" <seconds>` generates one with
   ElevenLabs (**spends far more credits than a voice line**: check https://elevenlabs.io/pricing, say the price and ask; it also runs `describe.py` when a Gemini key exists, which

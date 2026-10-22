@@ -200,9 +200,10 @@ assets{name: "assets/file.png"}, inserts[{at, dur, asset, layout}], cover
 
 ## The sound library
 
-`audio-lib/` holds only a small kit made from code (CC0): effects `stamp-low`, `scratch-stop`, `womp`, `ping-soft`, `whoosh-air`, `error-buzz`,
-`chime-up`, `sparkle-dust`, `claps-small`, `key-tap`, `ba-dum-tss`, `bulb-hum`, the music bed `lofi-bed.mp3`, and the room tone
-`amb-morning-fan-long.wav`. List the folders to see what is there now. `new_episode.py` writes placeholder file names in `audio`; replace each with a file
+`audio-lib/` holds sounds anyone may reuse (CC0): a kit made from code (effects `stamp-low`, `scratch-stop`, `womp`, `ping-soft`, `whoosh-air`,
+`error-buzz`, `chime-up`, `sparkle-dust`, `claps-small`, `key-tap`, `ba-dum-tss`, `bulb-hum`, the music bed `lofi-bed.mp3`, the room tone
+`amb-morning-fan-long.wav`), and the Claude Kami series' own ElevenLabs effects and room tones (crowds, a rimshot, jeepney, traffic, rain, rooms
+at night, a classroom, a cafe; the `*-long.mp3` files are beds). `SOURCES.json` says what each one is. List the folders to see what is there now. `new_episode.py` writes placeholder file names in `audio`; replace each with a file
 that exists. More sounds: `python tools/synth_sounds.py` (rewrites the kit, free), `python tools/sfx.py name.mp3 "<plain description>" <seconds>` (ElevenLabs,
 spends far more credits than a voice line: say the price first; refuses to overwrite without `--force`), or files the person has the right to use. **Every file gets an entry in its folder's
 `SOURCES.json` (source and licence)** and nothing is added that is not free to share (`docs/licences.md`). `SOURCES.json` is LF.

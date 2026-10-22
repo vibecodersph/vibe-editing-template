@@ -75,7 +75,7 @@ Si Claude ang bahala sa files at commands. Sa iyo ang:
 
 - `src/`, `tools/`, `video/`: ang engine (ang eksena, ang mga command, ang HyperFrames project)
 - `docs/`: cinematography, story formula, mga rules ng series, at licences
-- `audio-lib/`: maliit na sound kit na gawa sa code (CC0)
+- `audio-lib/`: mga tunog na puwedeng gamitin ng kahit sino (CC0): isang kit na gawa sa code, at ang sariling ElevenLabs sound effects at room tones ng Claude Kami series
 - `episodes/00-legit-developer`: ang example episode (Claude Kami episode 13, "Legit Developer", mga 54 segundo). Voiced na ito, kaya nagre-render nang walang kahit anong key
 - `series.json`: ang card handle mo, credit, logo, at ang mga boses na pipiliin mo
 - `.env.example`: kopyahin bilang `.env` para sa mga keys mo
@@ -85,7 +85,7 @@ Si Claude ang bahala sa files at commands. Sa iyo ang:
 ## Lisensya, credits at disclaimer
 
 - Code: MIT, tingnan ang [LICENSE](LICENSE).
-- Ang mga tunog sa `audio-lib/` ay gawa sa code at inilabas bilang CC0.
+- Ang mga tunog sa `audio-lib/` ay gawa sa code o ginawa ng Vibe Coders PH gamit ang ElevenLabs, at lahat ay inilabas bilang CC0.
 - Mga font: Fraunces at Gelasio, sa ilalim ng SIL Open Font License.
 - Ang Vibe Coders PH logo ay pag-aari ng Vibe Coders PH. Ang logo sa card ay itinatakda sa `series.json`, kaya ilagay mo ang sarili mo.
 - Ang Vibe Coders PH star sa hoodie ng developer ay bahagi ng karakter. Pakiusapan mo si Claude na baguhin kung gusto mo.
@@ -162,7 +162,7 @@ Claude does the files and the commands. These are yours:
 
 - `src/`, `tools/`, `video/`: the engine (the scene, the commands, the HyperFrames project)
 - `docs/`: cinematography, the story formula, the series rules, and licences
-- `audio-lib/`: a small sound kit made from code (CC0)
+- `audio-lib/`: sounds anyone may reuse (CC0): a kit made from code, and the Claude Kami series' own ElevenLabs sound effects and room tones
 - `episodes/00-legit-developer`: the example episode (Claude Kami episode 13, "Legit Developer", about 54 seconds). It is already voiced, so it renders with no keys at all
 - `series.json`: your card handle, credit, logo, and the voices you pick
 - `.env.example`: copy it to `.env` for your keys
@@ -172,7 +172,7 @@ Claude does the files and the commands. These are yours:
 ## Licences, credits and disclaimer
 
 - Code: MIT, see [LICENSE](LICENSE).
-- The sounds in `audio-lib/` are made from code and released as CC0.
+- The sounds in `audio-lib/` are made from code or by Vibe Coders PH with ElevenLabs, and all are released as CC0.
 - Fonts: Fraunces and Gelasio, under the SIL Open Font License.
 - The Vibe Coders PH logo belongs to Vibe Coders PH. The logo on the card is set in `series.json`, so put your own there.
 - The Vibe Coders PH star on the developer's hoodie is part of the character. Ask Claude to change it if you want.

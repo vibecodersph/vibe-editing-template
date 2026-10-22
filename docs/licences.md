@@ -39,6 +39,7 @@ signs are made up (for example ALING NENA, VIBE COLA, KAPEHAN).
 | `audio-lib/music/lofi-bed.mp3` | code: `tools/synth_sounds.py` | CC0-1.0 |
 | `audio-lib/sfx/bulb-hum.mp3` | code: numpy (mains hum and a faint buzz) | CC0-1.0 |
 | `audio-lib/sfx/amb-morning-fan-long.wav` | code: ffmpeg (filtered noise and a hum, a stand fan in a room) | CC0-1.0 |
+| The 43 files in `audio-lib/sfx/` whose `SOURCES.json` source begins "ElevenLabs sound generation" (for example `applause-small.mp3`, `rimshot.mp3`, `jeep-horn-melodic.mp3`, `flood-rain-street.mp3`, `amb-classroom.mp3`), and the eleven `*-long.mp3` room tones and beds made from them | Vibe Coders PH, October 2026, with ElevenLabs sound effects on a paid plan, for the Claude Kami series | CC0-1.0 |
 
 ## The example's voices
 
@@ -52,7 +53,6 @@ signs are made up (for example ALING NENA, VIBE COLA, KAPEHAN).
 |---|---|
 | The Pixabay sound effects the series used (error, ping, pop, sparkle, typing, two whooshes, and key clicks cut from them) | Pixabay's licence does not allow sharing the files themselves. You may download them from Pixabay for your own videos. |
 | The HeyGen catalogue music and effects (six music beds, ten effects) | No licence was found that allows sharing them. |
-| The series' ElevenLabs sound effects and their long loops | The plan they were made on is not recorded, so they stay out until that is confirmed. |
 | Platform icons (Instagram, Facebook, TikTok, YouTube, Gmail) | Trademarks, and their source was not recorded. |
 | The series' own voice clips | Voice Library voices of real people, and one personal cloned voice. |
 
