@@ -46,7 +46,7 @@ def main():
         if not voices:
             sys.exit('series.json has no "voices": add {"buloy": {"voice_id": ...}, "claude": {"voice_id": ...}} (see .env.example and series.json)')
         if not all(isinstance(v, dict) and v.get('voice_id') for v in voices.values()):
-            sys.exit('series.json "voices" need a voice_id each: pick voices your ElevenLabs account can use first (the kami-setup skill helps)')
+            sys.exit('series.json "voices" need a voice_id each: pick voices your ElevenLabs account can use first (the vibe-editing-setup skill helps)')
     out = os.path.join(EPS, slug)
     os.makedirs(os.path.join(out, 'audio'), exist_ok=False)
     script = {'title': title}

@@ -71,4 +71,4 @@ Rules for the mix:
 4. **Ten hooks** for slot 1, scored; take the best and keep one alternative.
 5. **Gate:** `python tools/check_canon.py episodes/NN-slug`.
 6. **The person reads the lines** for grammar before anything is voiced (CK-12).
-7. Then the usual road: voice, set, sound, `qa.py`, render (`AGENTS.md`, and the `claude-kami` skill).
+7. Then the usual road: voice, set, sound, `qa.py`, render (`AGENTS.md`, and the `vibe-editing` skill).

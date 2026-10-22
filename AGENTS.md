@@ -1,4 +1,7 @@
-# Claude Kami: the engine's manual
+# The skit engine: manual of the Claude Kami style
+
+This file is the manual of the skit style included in the Vibe Editing template (the `vibe-editing` skill's Road A). Other kinds of video are
+built with HyperFrames and need none of it.
 
 Code-only 3D pixel-art skits: a low-poly Buloy talks to Claude (an orange block) in Taglish. Three.js draws the scene at 360x640, it is shown at
 1080x1920, and HyperFrames renders it. No generated video. This file is for Claude Code: it is the manual for the commands, `script.json`, sets
@@ -6,8 +9,8 @@ and traps. The person you are talking to may not code: do the technical work, as
 voices, the look), and ask before anything that spends money or sends audio to Google (the list is under "Keys and what spends money").
 Never post or publish anything for them, and do not commit unless they ask.
 
-- First time here, or something is not installed: the `kami-setup` skill.
-- Making, fixing or rendering an episode: the `claude-kami` skill (it points here for details).
+- First time here, or something is not installed: the `vibe-editing-setup` skill.
+- Making, fixing or rendering a video: the `vibe-editing` skill (its Road A, the ready-made skit, points here for details).
 - `CLAUDE.md` has the standing rules (keys, spending, language).
 
 **Read before any episode work, in this order:** [docs/canon.md](docs/canon.md) (the series' rules, CK-nn; the gate checks them),
@@ -125,7 +128,7 @@ episode's `voices` (`"who": {"voice_id": "...", "note": "..."}`) and a `who` on 
 Brian) as a record of what it was voiced with; those ElevenLabs default voices are being retired (they expire on 2026-12-31 and exist only for
 accounts made before March 2026). That does not affect rendering the example, whose clips are already made.
 
-**Picking voices** (the `kami-setup` skill walks the person through it):
+**Picking voices** (the `vibe-editing-setup` skill walks the person through it):
 1. List what the person's own account can use through the API: a read-only one-liner that reads `ELEVENLABS_API_KEY` from `.env` without printing it and
    prints `voice_id`, `category` and `name` from `GET https://api.elevenlabs.io/v2/voices?page_size=100` (the key needs Voices read access).
 2. On the Free plan, use voices whose category is `premade` (old accounts only, until 2026-12-31), `generated` (made with Voice Design in their account)

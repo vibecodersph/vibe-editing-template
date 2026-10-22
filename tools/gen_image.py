@@ -2,14 +2,13 @@
 
     python tools/gen_image.py episodes/NN-slug [--only id,id] [--force] [--model gemini-nano-banana-2.1] [--dry-run]
 
-Reads <episode>/assets/manifest.json (the same shape explainer-lab/tools/gen-image.mjs reads):
+Reads <episode>/assets/manifest.json:
   { "style": {"common": "...", "background": "...", "cutout": "..."},
     "assets": [ {"id": "street-far", "kind": "background" | "texture" | "prop" | "character",
                  "size": "1024x1536", "aspect": "9:16" (optional, wins over size), "prompt": "..."} ] }
 Writes <episode>/assets/raw/<id>.png and appends one line per call to <episode>/assets/ledger.jsonl
 (model, prompt hash, token usage, file hash), so every generated image can be traced.
 The key is GEMINI_API_KEY from this folder's git-ignored .env (see .env.example) or the environment; it is never printed.
-An OpenAI route exists too (explainer-lab/tools/gen-image.mjs, same manifest) for when that key has credit.
 """
 import base64
 import datetime

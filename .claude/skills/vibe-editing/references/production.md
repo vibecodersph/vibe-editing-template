@@ -162,3 +162,23 @@ What a reader finds that no machine check finds, so look for these before handin
 ## When a check fails
 
 The table is in `AGENTS.md` ("When a check fails"). The rule under it: fix the film, never the limit.
+
+## Mistakes already made (keep the checks)
+
+- Trusted a thumbnail sheet and a builder's own report: hands through props, a flood that read as a floor. **Look at full size.**
+- Dropped the music, the accents and the said-aloud line a little more each episode. Run `soundcheck.py` and count the laugh beats.
+- Frame 0 was a figure standing still because the pose waited for the line. **Take frame 0 from the finished file.**
+- Signs half hidden behind a head. Whole or absent.
+- Judged a dark set by eye and opened on a frame a stranger read as "a candle-lit cake". Measure brightness against the example episode, and ask a
+  reader what frame 0 says with the sound off.
+- Placed effects by the start of the file; several are silent for a third to half a second, so hits landed late. Measure with `soundlook.py`.
+- Trusted a passing QA after adding a cut. A new cut is a new sample: run it again.
+- Cut to the listener's face while the speaker's caption was still up; with the sound off the line became the listener's. The speaker stays on
+  screen for his whole line; the reaction comes after it, in silence.
+- Put the stake (a raised stamp) on a table, under the frame. What the hook is about sits above the bottom fifth of frame 0 (the gate's line), and
+  higher is safer: a thing low in the frame falls under the phone app's interface.
+- Measured a render that had failed its layout check: the files in `renders/` were the cut before. **Read the render's exit status.**
+- Changed the speed of a re-voiced line and got the old take back under the new timings. Check a new take before touching its speed.
+- Checked contacts on a 0.1 s sweep only. A one-frame touch sat between the samples until a retiming moved it onto one. After a retiming, run
+  `python tools/qa.py episodes/NN-slug --step 0.0333333 --no-images` (every rendered frame). Hair is not in that check: look at anything worn on a head.
+- Wrote a rule from a style card and removed what had worked. A new rule is tested against an episode that worked before it is kept.

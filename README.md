@@ -1,10 +1,12 @@
-# Claude Kami Template
+# Vibe Editing
 
 ![Isang frame mula sa example episode / A frame from the example episode](docs/img/example.png)
 
-**Taglish:** Gumawa ng sarili mong skit video na code ang gumuguhit ng bawat frame, sa pakikipag-usap lang kay Claude Code. Wala kang isusulat na code.
+Lumaki ang Vibe Editing mula sa Claude Kami, ang skit series ng [Vibe Coders PH](https://vibecoders.ph).
 
-**English:** Make your own skit videos where code draws every frame, just by talking to Claude Code. You write no code.
+**Taglish.** Gumawa ng kahit anong klaseng video sa pakikipag-usap lang kay Claude Code. Wala kang isusulat na code.
+
+**English.** Make any kind of video just by talking to Claude Code. You write no code.
 
 Basahin sa: [Taglish](#taglish) | [English](#english)
 
@@ -15,83 +17,102 @@ Basahin sa: [Taglish](#taglish) | [English](#english)
 
 ## Ano ito
 
-Ito ang engine sa likod ng **Claude Kami**, ang skit series ng [Vibe Coders PH](https://vibecoders.ph). Si Buloy (low-poly na Pilipinong developer) ay nakikipag-usap kay Claude (isang orange na block, deadpan at honest) sa Taglish, sa iba't ibang lugar sa Pilipinas tulad ng sari-sari store o jeepney.
+Isang folder na may lahat ng kailangan ni Claude para gumawa ng video para sa iyo. Ikaw ang magsasabi kung ano ang gusto mo, sa sarili mong salita. Si Claude ang magsusulat ng code, magre-render, at magtatanong kapag may kulang.
 
-Walang AI-generated na video dito. Code ang bawat frame: Three.js ang gumuguhit ng eksena, HyperFrames ang nagre-render ng video.
+Kahit anong video: explainer, kinetic text, motion graphics, skit. Kahit anong art style, topic o message. Vertical, horizontal o square.
 
-Template ito. I-clone mo, tapos gagawa ka ng sarili mong episodes gamit ang sarili mong idea.
+May isang ready-made na style na kasama, para may mapanood ka agad. Low-poly na 3D skit: isang developer at si Claude (isang orange na block) na nag-uusap sa Taglish sa isang lugar sa Pilipinas. Ang example video ay nasa `episodes/00-legit-developer`, at nagre-render ito nang walang kahit anong key.
 
-## Ang kwento
+Kung ibang klase ng video ang gusto mo, si Claude ang gagawa nito gamit ang HyperFrames, at gagamitin niya ang mga boses at tunog na nandito na. Mas maraming balikan ito (mas maraming usap at ayos) kaysa sa ready-made na style.
 
-Vibe coders tayo, kaya si Claude ang gagawa. May code, oo, at nandito lahat, pero hindi mo kailangang mag-code ng kahit ano: nasa skills na 'yon. Clone mo lang.
+## Ano ang kailangan
 
-Hindi lahat ng nasa community natin ay technical, pero gusto nilang gumawa ng video. Kaya walang step-by-step tutorial na puro code. Ano pa ang point? May Claude naman tayo, kaya si Claude ang gagamitin. Siya lang ang kailangan mong bayaran para makapag-render ng example (tingnan sa ibaba kung kailan may iba pang gastos).
+- [ ] Computer. Sa Windows 11 pa lang ito na-test, kaya 'yon pa lang ang sigurado namin.
+- [ ] Paid na Claude plan (Pro, Max, Team o Enterprise). Wala ang Claude Code sa free plan.
+- [ ] Internet. Kailangan ito sa unang render. Mga 150 MB ang isang tapos na cut, kaya may espasyo ka dapat.
+- [ ] Isang idea, kahit malabo pa.
 
-Libre ang ibinabahagi namin, walang gatekeeping. Pero template ito: ilalagay mo ang sarili mong taste at assets. Ikaw pa rin ang bahala sa creative work mo.
-
-## Ano ang kailangan at magkano
-
-**Kailangan:**
-
-- Computer: Windows, macOS o Linux. Sa Windows 11 pa lang ito na-test, kaya 'yon pa lang ang sigurado namin.
-- Claude Code, sa paid na Claude plan.
-- git, Python 3.10 pataas (may Pillow at numpy), Node.js 22 pataas, at ffmpeg. Kung wala ka pa nito, si Claude na ang mag-i-install, basta pumayag ka.
-- Internet sa unang render: dina-download nito ang sarili nitong headless Chrome at naglo-load ng dalawang library mula sa web. Ang tatlong file ng isang tapos na cut ay mga 150 MB.
-
-**Magkano, walang paligoy:**
-
-- **Claude (ito ang pinakamalaking gastos).** Nasa lahat ng paid plan ang Claude Code, wala sa free. Pro: $20 kada buwan (o $17 kada buwan kung yearly ang bayad). Max: simula $100 kada buwan. [claude.com/pricing](https://claude.com/pricing)
-- **ElevenLabs (mga boses).** Ang Free plan ay $0 na may 10,000 credits kada buwan. Mga 1 credit ang bawat character ng speech, at mga 800 hanggang 1,000 characters ang isang episode. Hanggang mga sampung episodes kada buwan, kung walang ni-re-voice at hindi ka gagawa ng sound effects (mas marami ang credits na kinakain ng mga iyon kaysa sa isang spoken line). **Pero walang commercial licence ang Free plan: personal, non-commercial use lang.** Sa Free din, hindi magagamit ng API ang Voice Library voices. Ang Starter ay $6 kada buwan: may commercial licence, 30,000 credits, at library voices. [elevenlabs.io/pricing](https://elevenlabs.io/pricing) at [Voice Library docs](https://elevenlabs.io/docs/product-guides/voices/voice-library)
-- **Gemini API (optional).** Ang check na nakikinig sa tapos nang video para i-check kung malinaw ang bawat salita ay optional. Magtatanong muna si Claude, kasi ipapadala nito ang audio sa Google. Sa free tier, puwedeng gamitin ng Google ang ipinapadala mo para pagandahin ang products nila, at puwede ring may taong magbasa nito, kaya huwag kang magpadala ng private. Hindi kailangan ang image generation (bayad lang iyon). [ai.google.dev/gemini-api/docs/pricing](https://ai.google.dev/gemini-api/docs/pricing)
-- **HyperFrames** (nagre-render ng video, Apache-2.0) at **Three.js** (MIT): libre, at tumatakbo sa sarili mong computer.
-
-**Tungkol sa mga boses.** Ang example ay ni-voice gamit ang mga default voice ng ElevenLabs na nire-retire na; hindi nito naaapektuhan ang pag-render ng example. Para sa sarili mong episodes, tutulungan ka ng setup na pumili ng dalawang boses na magagamit ng sarili mong ElevenLabs account sa pamamagitan ng API. Sa Free, ito ay boses na dinisenyo mo gamit ang Voice Design, o ang mga lumang default voice kung mas luma ang account mo. Kailangan ng paid plan para sa library voices. Magte-test muna ito ng isang maikling linya ng bawat isa (ilang dosenang credits).
-
-**Tungkol sa effort.** Matagal gumawa ng bagong episode. Ang pinakamahabang hakbang ay ang staging, kung saan isinusulat ni Claude kung paano gumagalaw ang mga karakter sa bawat linya, at malaking bahagi ito ng limits ng Claude plan mo.
+Wala nang iba. Ang mga programang kailangan pa (Node.js, Python, ffmpeg) ay si Claude ang mag-i-install, basta pumayag ka.
 
 ## Paano magsimula
 
-1. Sa GitHub, pindutin ang **Use this template** (o `git clone`).
-2. Buksan ang folder sa Claude Code: sa desktop app, o magpatakbo ng `claude` sa terminal sa loob ng folder.
-3. Sabihin: **"i-setup mo ako"** (o "set me up"). Ang `kami-setup` skill ang titingin kung ano ang kulang, mag-i-install kapag pumayag ka, gagawa ng `.env`, sasagutan ang `series.json` kasama ka, at magre-render ng example.
-4. Panoorin ang example: `renders/00-legit-developer-v1-upload.mp4`.
-5. Sabihin: **"gawa tayo ng bagong episode tungkol sa ..."** (o "let's make a new episode about ..."). Itatanong ni Claude ang idea mo, tapos magdi-draft siya ng mga linya para basahin at baguhin mo. Magtatanong din siya bago gumastos ng credits.
+1. Mag-sign up sa Claude at kumuha ng paid plan (Pro ang pinakamura). Ang presyo ay nasa [claude.com/pricing](https://claude.com/pricing).
+2. I-download at i-install ang Claude desktop app sa [claude.com/download](https://claude.com/download). May Claude Code na sa loob nito. Hindi mo kailangan ng terminal (ang itim na window na puro text).
+3. Kunin ang template na ito. Sa GitHub page na ito, pindutin ang **Code**, tapos **Download ZIP**, tapos i-unzip (i-extract) ang file. Kung may GitHub account ka, puwede ring **Use this template**.
+4. Sa Claude desktop app, buksan ang Claude Code at piliin ang folder na in-unzip mo.
+5. Sabihin: **"i-setup mo ako"** (o "set me up"). Ang `vibe-editing-setup` ang titingin kung ano ang kulang, mag-i-install kapag pumayag ka, gagawa ng `.env` (isang file na pinaglalagyan ng mga keys mo), itatanong ang handle mo at ang mga boses, at magre-render ng example.
+6. Panoorin ang example sa `renders/00-legit-developer-v1-upload.mp4`.
+7. Sabihin kay Claude ang gusto mo. Itatanong niya ang mga kulang, tapos magdi-draft siya para basahin at baguhin mo. Magtatanong din siya bago gumastos ng credits.
 
-Ang `claude-kami` skill ang gumagabay sa buong proseso: idea, script, boses, set at camera, tunog, checks, render.
+Ang `vibe-editing` skill ang gumagabay sa buong proseso, mula idea hanggang render.
+
+## Ano ang sasabihin kay Claude
+
+Sa sarili mong salita. Mga halimbawa:
+
+- "Gawa tayo ng 30-second na vertical video tungkol sa ..."
+- "Gusto ko ng explainer na may malalaking text na gumagalaw, para sa ..."
+- "Horizontal na intro para sa channel ko, simple lang, kulay ..."
+- "Gawa tayo ng skit na kagaya ng example, pero sa ibang lugar."
+- "Ito ang script ko. Gawan mo ng video."
+
+Kapag malabo pa ang idea, sabihin mo lang 'yon. Magtatanong si Claude hanggang luminaw.
+
+## Lahat ng tools at magkano
+
+Ang "needed" ay kailangan talaga. Ang "optional" ay puwedeng wala.
+
+| Tool | Ano ang ginagawa | Magkano | Needed o optional |
+|---|---|---|---|
+| **Claude Code** (nasa Claude desktop app o terminal) | Ito ang kausap mo. Siya ang sumusulat at nagpapatakbo ng lahat. Ginawa ang template na ito gamit ang Claude Opus 5.5, na kasama sa Pro at Max. Mas malalaking trabaho, mas malaking bahagi ng limits ng plan mo. | Pro $20 kada buwan ($17 kada buwan kung yearly ang bayad). Max simula $100 kada buwan. [claude.com/pricing](https://claude.com/pricing) | Needed |
+| **ElevenLabs** (model eleven_v4) | Mga boses at sound effects. Key sa `.env`: `ELEVENLABS_API_KEY`. | Free: $0, 10,000 credits kada buwan, mga 1 credit kada character ng speech. **Personal, non-commercial use lang ang Free**, at hindi magagamit ng API ang Voice Library voices. Starter: $6 kada buwan, may commercial licence, 30,000 credits, at library voices. Mas maraming credits ang kinakain ng sound effects kaysa sa isang spoken line. [elevenlabs.io/pricing](https://elevenlabs.io/pricing) | Optional. Kailangan lang para sa bagong boses o bagong sound effect |
+| **Google Gemini API** (model gemini-3.8-flash) | Nakikinig sa tapos nang video para i-check kung malinaw ang bawat salita, at naglalarawan ng mga tunog. May optional din na paggawa ng picture para sa set (Gemini image model, bayad lang, hindi kailangan). Key sa `.env`: `GEMINI_API_KEY`. | Free tier ang gamit. **Sa free tier, puwedeng gamitin ng Google ang ipinapadala mo para pagandahin ang products nila, at puwedeng may taong magbasa nito, kaya huwag kang magpadala ng private.** Magtatanong muna si Claude. [ai.google.dev/gemini-api/docs/pricing](https://ai.google.dev/gemini-api/docs/pricing) | Optional |
+| **HyperFrames** | Ginagawang video file ang eksena. Open source (Apache-2.0). Dina-download nito ang sarili nitong headless Chrome (browser na walang window) sa unang takbo. | Libre | Needed, kusang naii-install |
+| **Three.js** at **GSAP** | Gumuguhit at nagpapagalaw ng 3D scene. | Libre. Kusang nilo-load mula sa web | Needed, kusang naglo-load |
+| **Node.js 22+**, **Python 3.10+** (may Pillow at numpy), **ffmpeg** | Mga libreng programa na kailangan ng mga tools. | Libre. Si Claude ang mag-i-install, basta pumayag ka | Needed |
+| **Git for Windows** | Para magamit ni Claude Code ang Bash tool nito sa Windows. | Libre | Optional (recommended) |
+| **GitHub account** | Para sa "Use this template" lang. Hindi kailangan ng Download ZIP. | Libre | Optional |
+
+Hindi ginagamit ang **Lyria** (music model ng Google). Gawa sa code ang music dito.
+
+Wala nang ibang account o key. Sa `.env` file mo lang nakalagay ang mga keys, at hindi ito umaalis sa computer mo.
+
+**Tungkol sa mga boses.** Ang example ay ni-voice gamit ang mga default voice ng ElevenLabs na nire-retire na. Hindi nito naaapektuhan ang pag-render ng example. Para sa sarili mong video, tutulungan ka ng setup na pumili ng mga boses na magagamit ng account mo sa pamamagitan ng API, at magte-test muna ito ng isang maikling linya ng bawat isa (ilang dosenang credits).
+
+**Tungkol sa effort.** Matagal gumawa ng bagong video. Ang staging at ang pag-build ay kumakain ng malaking bahagi ng limits ng Claude plan mo.
 
 ## Ano ang sa iyo pa rin
 
 Si Claude ang bahala sa files at commands. Sa iyo ang:
 
-- ang idea at ang kwento
+- ang idea at ang gusto mong sabihin
+- ang taste mo sa itsura at sa tunog
 - ang final say sa bawat linya (nagdi-draft si Claude, ikaw ang nagde-decide)
 - ang mga boses mo
-- ang taste mo sa itsura at sa tunog
-- ang sarili mong assets (sounds, music, logo) na may karapatan kang gamitin
+- ang sarili mong assets na may karapatan kang gamitin
 - ang panonood sa bawat cut bago i-post
-- ang pag-post mismo: ikaw ang magpo-post, hindi si Claude
+- ang pag-post mismo. Ikaw ang magpo-post, hindi si Claude
 
 ## Ano ang laman
 
 - `src/`, `tools/`, `video/`: ang engine (ang eksena, ang mga command, ang HyperFrames project)
 - `docs/`: cinematography, story formula, mga rules ng series, at licences
-- `audio-lib/`: mga tunog na puwedeng gamitin ng kahit sino (CC0): isang kit na gawa sa code, at ang sariling ElevenLabs sound effects at room tones ng Claude Kami series
-- `episodes/00-legit-developer`: ang example episode (Claude Kami episode 13, "Legit Developer", mga 54 segundo). Voiced na ito, kaya nagre-render nang walang kahit anong key
-- `series.json`: ang card handle mo, credit, logo, at ang mga boses na pipiliin mo
+- `audio-lib/`: mga tunog na puwedeng gamitin ng kahit sino (CC0)
+- `episodes/00-legit-developer`: ang example video, voiced na, nagre-render nang walang key
+- `series.json`: ang handle mo sa card, credit, logo, at ang mga boses na pipiliin mo
 - `.env.example`: kopyahin bilang `.env` para sa mga keys mo
-- `.claude/skills/kami-setup`: unang takbo (checks, install, `.env`, `series.json`, render ng example)
-- `.claude/skills/claude-kami`: idea, script, boses, set at camera, tunog, checks, render
+- `.claude/skills/vibe-editing-setup`: unang takbo
+- `.claude/skills/vibe-editing`: ang buong proseso ng paggawa ng video
 
 ## Lisensya, credits at disclaimer
 
 - Code: MIT, tingnan ang [LICENSE](LICENSE).
-- Ang mga tunog sa `audio-lib/` ay gawa sa code o ginawa ng Vibe Coders PH gamit ang ElevenLabs, at lahat ay inilabas bilang CC0.
-- Mga font: Fraunces at Gelasio, sa ilalim ng SIL Open Font License.
-- Ang Vibe Coders PH logo ay pag-aari ng Vibe Coders PH. Ang logo sa card ay itinatakda sa `series.json`, kaya ilagay mo ang sarili mo.
-- Ang Vibe Coders PH star sa hoodie ng developer ay bahagi ng karakter. Pakiusapan mo si Claude na baguhin kung gusto mo.
+- Ang mga tunog sa `audio-lib/` ay gawa sa code o ginawa ng Vibe Coders PH gamit ang ElevenLabs, at lahat ay CC0.
+- Mga font: sa ilalim ng SIL Open Font License.
+- Ang Vibe Coders PH logo at ang star sa hoodie ng karakter ay pag-aari ng Vibe Coders PH. Ang logo sa card ay itinatakda sa `series.json`, kaya ilagay mo ang sarili mo. Pakiusapan mo si Claude na palitan ang star kung gusto mo.
 - Mga detalye: `docs/licences.md`.
 
-**Disclaimer:** Ang Claude character ay fan-made na paglalarawan. Ang "Claude" ay trademark ng Anthropic. Hindi ito affiliated sa Anthropic at hindi rin ineendorso ng Anthropic.
+**Disclaimer.** Ang Claude character ay fan-made na paglalarawan. Ang "Claude" ay trademark ng Anthropic. Hindi ito affiliated sa Anthropic at hindi rin ineendorso ng Anthropic.
 
 ---
 
@@ -102,80 +123,99 @@ Si Claude ang bahala sa files at commands. Sa iyo ang:
 
 ## What this is
 
-This is the engine behind **Claude Kami**, the skit series of [Vibe Coders PH](https://vibecoders.ph). Buloy (a low-poly Filipino developer) talks to Claude (an orange block, deadpan and honest) in Taglish, in different places in the Philippines such as a sari-sari store or a jeepney.
+One folder with everything Claude needs to make videos for you. You say what you want, in your own words. Claude writes the code, renders the video, and asks when something is missing.
 
-There is no AI-generated video here. Every frame is code: Three.js draws the scene, HyperFrames renders the video.
+Any kind of video: explainer, kinetic text, motion graphics, skit. Any art style, topic or message. Vertical, horizontal or square.
 
-It is a template. Clone it, then make your own episodes from your own ideas.
+One ready-made style is included, so you have something to watch right away. Low-poly 3D skits: a developer and Claude (an orange block) talking in Taglish in a place in the Philippines. The example video is in `episodes/00-legit-developer`, and it renders with no keys at all.
 
-## The story
+If you want a different kind of video, Claude builds it with HyperFrames and reuses the voices and sounds that are already here. It takes more back-and-forth (more talking and fixing) than the ready-made style.
 
-We are vibe coders, so Claude does the work. There is code, yes, and all of it is here, but you do not have to code anything: it is already in the skills. You just clone it.
+## What you need
 
-Not everyone in our community is technical, but they want to make videos. So there is no step-by-step tutorial full of code. What would be the point? We have Claude, so we use Claude. He is the only one you have to pay to render the example (see below for when other costs come in).
+- [ ] A computer. So far it has been tested on Windows 11 only, so that is the only one we are sure about.
+- [ ] A paid Claude plan (Pro, Max, Team or Enterprise). The free plan does not include Claude Code.
+- [ ] Internet. It is needed on the first render. One finished cut is about 150 MB, so keep some free space.
+- [ ] An idea, even a fuzzy one.
 
-What we share is free, no gatekeeping. But this is a template: you add your own taste and your own assets. The creative work is still yours.
-
-## What you need and what it costs
-
-**You need:**
-
-- A computer: Windows, macOS or Linux. So far it has been tested on Windows 11 only, so that is the only one we are sure about.
-- Claude Code, on a paid Claude plan.
-- git, Python 3.10 or newer (with Pillow and numpy), Node.js 22 or newer, and ffmpeg. If you do not have these yet, Claude installs them, with your OK.
-- Internet on the first render: it downloads its own headless Chrome and loads two libraries from the web. The three files of one finished cut take about 150 MB.
-
-**What it costs, plainly:**
-
-- **Claude (the main cost).** Claude Code is in every paid plan, not the free one. Pro is $20 a month (or $17 a month billed yearly). Max starts at $100 a month. [claude.com/pricing](https://claude.com/pricing)
-- **ElevenLabs (voices).** The Free plan is $0 with 10,000 credits a month. Speech costs about 1 credit per character, and an episode is about 800 to 1,000 characters. That is up to about ten episodes a month, if nothing is re-voiced and you do not generate sound effects (those cost far more credits than a spoken line). **But the Free plan has no commercial licence: personal, non-commercial use only.** On Free, the API also cannot use Voice Library voices. Starter is $6 a month: a commercial licence, 30,000 credits and library voices. [elevenlabs.io/pricing](https://elevenlabs.io/pricing) and the [Voice Library docs](https://elevenlabs.io/docs/product-guides/voices/voice-library)
-- **Gemini API (optional).** The check that listens to the finished video to see that every word comes through is optional. Claude asks you first, because it sends the audio to Google. On the free tier, Google may use what you send to improve its products, and people may review it, so send nothing private. Image generation is paid only and not needed. [ai.google.dev/gemini-api/docs/pricing](https://ai.google.dev/gemini-api/docs/pricing)
-- **HyperFrames** (renders the video, Apache-2.0) and **Three.js** (MIT): free, and they run on your own computer.
-
-**About the voices.** The example was voiced with ElevenLabs default voices that are being retired; that does not affect rendering it. For your own episodes, the setup helps you pick two voices your own ElevenLabs account can use through the API. On Free, that is a voice you design with Voice Design, or the old default voices if your account is older. Library voices need a paid plan. It tests one short line of each first (a few dozen credits).
-
-**About the effort.** A new episode takes a while. The longest step is staging, where Claude writes how the characters move on every line, and it uses a good share of your Claude plan's limits.
+That is all. The other programs it needs (Node.js, Python, ffmpeg) are installed by Claude, if you say yes.
 
 ## How to start
 
-1. On GitHub, press **Use this template** (or `git clone`).
-2. Open the folder in Claude Code: in the desktop app, or run `claude` in a terminal inside the folder.
-3. Say: **"set me up"** (or "i-setup mo ako"). The `kami-setup` skill checks what is missing, installs it when you say yes, makes your `.env`, fills in `series.json` with you, and renders the example.
-4. Watch the example: `renders/00-legit-developer-v1-upload.mp4`.
-5. Say: **"let's make a new episode about ..."** (or "gawa tayo ng bagong episode tungkol sa ..."). Claude asks for your idea, then drafts the lines for you to read and change. It also asks before anything spends credits.
+1. Sign up for Claude and get a paid plan (Pro is the cheapest). Prices are at [claude.com/pricing](https://claude.com/pricing).
+2. Download and install the Claude desktop app from [claude.com/download](https://claude.com/download). Claude Code is already inside it. You do not need a terminal (the black window full of text).
+3. Get this template. On this GitHub page, press **Code**, then **Download ZIP**, then unzip (extract) the file. If you have a GitHub account, you can also press **Use this template**.
+4. In the Claude desktop app, open Claude Code and pick the folder you unzipped.
+5. Say: **"set me up"** (or "i-setup mo ako"). `vibe-editing-setup` checks what is missing, installs it when you say yes, makes your `.env` (a file where your keys go), asks for your handle and your voices, and renders the example.
+6. Watch the example at `renders/00-legit-developer-v1-upload.mp4`.
+7. Tell Claude what you want. It asks for what is missing, then drafts something for you to read and change. It also asks before anything spends credits.
 
-The `claude-kami` skill guides the whole process: idea, script, voices, set and camera, sound, checks, render.
+The `vibe-editing` skill guides the whole process, from idea to render.
+
+## What to say to Claude
+
+In your own words. Some examples:
+
+- "Let's make a 30-second vertical video about ..."
+- "I want an explainer with big moving text, for ..."
+- "A horizontal intro for my channel, simple, in the color ..."
+- "Let's make a skit like the example, but in a different place."
+- "Here is my script. Make a video from it."
+
+If the idea is still fuzzy, just say so. Claude keeps asking until it is clear.
+
+## Every tool and what it costs
+
+"Needed" means you cannot do without it. "Optional" means you can.
+
+| Tool | What it does | Cost | Needed or optional |
+|---|---|---|---|
+| **Claude Code** (in the Claude desktop app or a terminal) | The one you talk to. It writes and runs everything. This template was built with Claude Opus 5.5, which is included in Pro and Max. Bigger jobs use more of your plan's limits. | Pro $20 a month ($17 a month billed yearly). Max from $100 a month. [claude.com/pricing](https://claude.com/pricing) | Needed |
+| **ElevenLabs** (model eleven_v4) | Voices and sound effects. Key in `.env`: `ELEVENLABS_API_KEY`. | Free: $0, 10,000 credits a month, about 1 credit per spoken character. **Free is personal, non-commercial use only**, and its API cannot use Voice Library voices. Starter: $6 a month, commercial licence, 30,000 credits, and library voices. Sound effects cost far more credits than a spoken line. [elevenlabs.io/pricing](https://elevenlabs.io/pricing) | Optional. Only needed for new voices or new sound effects |
+| **Google Gemini API** (model gemini-3.8-flash) | Listens to the finished video to check every word is clear, and describes sounds. Also optional picture generation for a set (Gemini image model, paid only, not needed). Key in `.env`: `GEMINI_API_KEY`. | Free tier. **On the free tier, Google may use what you send to improve its products, and people may review it, so send nothing private.** Claude asks first. [ai.google.dev/gemini-api/docs/pricing](https://ai.google.dev/gemini-api/docs/pricing) | Optional |
+| **HyperFrames** | Turns the scene into a video file. Free and open source (Apache-2.0). Downloads its own headless Chrome (a browser with no window) the first time. | Free | Needed, installed automatically |
+| **Three.js** and **GSAP** | Draw and animate the 3D scene. | Free. Loaded automatically from the web | Needed, loaded automatically |
+| **Node.js 22+**, **Python 3.10+** (with Pillow and numpy), **ffmpeg** | Free programs the tools need. | Free. Claude installs them, if you say yes | Needed |
+| **Git for Windows** | Lets Claude Code use its Bash tool on Windows. | Free | Optional (recommended) |
+| **GitHub account** | Only for "Use this template". Download ZIP needs none. | Free | Optional |
+
+**Lyria** (Google's music model) is not used. The music here is made from code.
+
+No other accounts or keys. Your keys live only in your `.env` file, which never leaves your computer.
+
+**About the voices.** The example was voiced with ElevenLabs default voices that are being retired. That does not affect rendering it. For your own video, the setup helps you pick voices your account can use through the API, and it tests one short line of each first (a few dozen credits).
+
+**About the effort.** A new video takes a while. Staging and building use a good share of your Claude plan's limits.
 
 ## What is still yours
 
 Claude does the files and the commands. These are yours:
 
-- the idea and the story
+- the idea and what you want to say
+- your taste in the look and the sound
 - the final say on every line (Claude drafts, you decide)
 - your voices
-- your taste in the look and the sound
-- your own assets (sounds, music, a logo) that you have the right to use
+- your own assets that you have the right to use
 - watching every cut before you post
-- posting it yourself: you post, not Claude
+- posting it yourself. You post, not Claude
 
 ## What is inside
 
 - `src/`, `tools/`, `video/`: the engine (the scene, the commands, the HyperFrames project)
 - `docs/`: cinematography, the story formula, the series rules, and licences
-- `audio-lib/`: sounds anyone may reuse (CC0): a kit made from code, and the Claude Kami series' own ElevenLabs sound effects and room tones
-- `episodes/00-legit-developer`: the example episode (Claude Kami episode 13, "Legit Developer", about 54 seconds). It is already voiced, so it renders with no keys at all
+- `audio-lib/`: sounds anyone may reuse (CC0)
+- `episodes/00-legit-developer`: the example video, already voiced, renders with no keys
 - `series.json`: your card handle, credit, logo, and the voices you pick
 - `.env.example`: copy it to `.env` for your keys
-- `.claude/skills/kami-setup`: first run (checks, install, `.env`, `series.json`, render the example)
-- `.claude/skills/claude-kami`: idea, script, voices, set and camera, sound, checks, render
+- `.claude/skills/vibe-editing-setup`: first run
+- `.claude/skills/vibe-editing`: the whole process of making a video
 
 ## Licences, credits and disclaimer
 
 - Code: MIT, see [LICENSE](LICENSE).
-- The sounds in `audio-lib/` are made from code or by Vibe Coders PH with ElevenLabs, and all are released as CC0.
-- Fonts: Fraunces and Gelasio, under the SIL Open Font License.
-- The Vibe Coders PH logo belongs to Vibe Coders PH. The logo on the card is set in `series.json`, so put your own there.
-- The Vibe Coders PH star on the developer's hoodie is part of the character. Ask Claude to change it if you want.
+- The sounds in `audio-lib/` are made from code or by Vibe Coders PH with ElevenLabs, and all are CC0.
+- Fonts: under the SIL Open Font License.
+- The Vibe Coders PH logo and the star on the character's hoodie belong to Vibe Coders PH. The logo on the card is set in `series.json`, so put your own there. Ask Claude to change the star if you want.
 - Details: `docs/licences.md`.
 
-**Disclaimer:** The Claude character is a fan-made depiction. "Claude" is a trademark of Anthropic. This project is not affiliated with or endorsed by Anthropic.
+**Disclaimer.** The Claude character is a fan-made depiction. "Claude" is a trademark of Anthropic. This project is not affiliated with or endorsed by Anthropic.

@@ -12,11 +12,11 @@
   "voices": {
     "buloy": {
       "voice_id": "",
-      "note": "Pick a voice your ElevenLabs account can use through the API (the kami-setup skill helps), then put its Voice ID here."
+      "note": "Pick a voice your ElevenLabs account can use through the API (the vibe-editing-setup skill helps), then put its Voice ID here."
     },
     "claude": {
       "voice_id": "",
-      "note": "Pick a voice your ElevenLabs account can use through the API (the kami-setup skill helps), then put its Voice ID here."
+      "note": "Pick a voice your ElevenLabs account can use through the API (the vibe-editing-setup skill helps), then put its Voice ID here."
     }
   }
 }

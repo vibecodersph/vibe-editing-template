@@ -1,13 +1,13 @@
 ---
-name: kami-setup
-description: "First-run setup for the Claude Kami template: check and install what the machine needs, set up the .env keys without ever showing them, fill in series.json (handle, credit, logo), pick two ElevenLabs voices the person's own account can use, and render the example episode to prove it works. Use when the person says 'set me up', 'i-setup mo ako', 'first time', 'paano magsimula', 'getting started', 'install', 'something is not installed', 'command not found', 'bakit hindi gumagana', 'pumili ng boses', 'pick voices', or opens this folder for the first time. Not for making an episode (use claude-kami)."
+name: vibe-editing-setup
+description: "First-run setup for the Vibe Editing template (make any video by talking to Claude): check and install what the machine needs, set up the .env keys without ever showing them, fill in series.json (handle, credit, logo), pick two ElevenLabs voices the person's own account can use, and render the example episode to prove it works. Use when the person says 'set me up', 'i-setup mo ako', 'first time', 'paano magsimula', 'getting started', 'install', 'something is not installed', 'paano gamitin', 'how do I start', 'command not found', 'bakit hindi gumagana', 'pumili ng boses', 'pick voices', or opens this folder for the first time. Not for making a video (use vibe-editing)."
 ---
 
-# Kami setup
+# Vibe editing setup
 
-You are setting up a folder so a person who may not code can make skit videos. Do the technical work yourself, in plain words, and ask
+You are setting up a folder so a person who may not code can make videos by talking to Claude. This skill grew out of Claude Kami, Vibe Coders PH's skit series. Do the technical work yourself, in plain words, and ask
 them only for what is theirs: an OK before installing, their keys (which they paste themselves), and the choices in `series.json`.
-Answer in the language they write in (Taglish or English). The engine's manual is `AGENTS.md`. Never post or publish anything for them; do
+Answer in the language they write in (Taglish or English). The manual of the included skit style is `AGENTS.md`. Never post or publish anything for them; do
 not commit unless they ask.
 
 ## 1. Say what is about to happen
@@ -110,6 +110,6 @@ Library voices are not available through the API on the Free plan. So the person
 
 ## 7. Hand over
 
-Tell them what is ready, and that the next step is: "let's make an episode about ..." (or "gawa tayo ng bagong episode tungkol sa ..."). That starts the
-`claude-kami` skill. Remind them the Claude plan is the main cost, voices cost credits and the Gemini check sends audio to Google (you will ask each
+Tell them what is ready, and that the next step is to say what video they want, for example "let's make a 30-second vertical video about ..." (or
+"gawa tayo ng 30-second na vertical video tungkol sa ..."). That starts the `vibe-editing` skill, which asks about the topic, the message and the look. Remind them the Claude plan is the main cost, voices cost credits and the Gemini check sends audio to Google (you will ask each
 time), and they post the finished video themselves.

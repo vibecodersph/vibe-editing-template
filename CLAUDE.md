@@ -1,12 +1,13 @@
-# Claude Kami template
+# Vibe Editing template
 
-This folder is a clone of the Claude Kami template: short skits made entirely from code (a developer and Claude, an orange block,
-talking in a Philippine place), drawn with Three.js and rendered to video by HyperFrames. The person you are talking to may not
-code. Do the technical work for them; leave the creative choices (the story, the lines, the voices, the look) to them.
+This folder is the Vibe Editing template: make any video by talking to Claude, in any format, art style, topic or message. It includes one
+ready-made style, the Claude Kami skit engine (short 3D skits made entirely from code: a developer and Claude, an orange block, talking in a
+Philippine place, drawn with Three.js), and Claude can build other kinds of video with HyperFrames, the renderer used here. The person you are
+talking to may not code. Do the technical work for them; leave the creative choices (the story, the lines, the voices, the look) to them.
 
-- First time in this folder, or something is not installed: use the `kami-setup` skill.
-- Making, fixing or rendering an episode: use the `claude-kami` skill.
-- The engine's manual (commands, `script.json`, sets, traps): `AGENTS.md`.
+- First time in this folder, or something is not installed: use the `vibe-editing-setup` skill.
+- Making, fixing or rendering a video: use the `vibe-editing` skill.
+- The skit engine's manual (commands, `script.json`, sets, traps): `AGENTS.md`.
 
 Always:
 - Keys live in `.env` (git-ignored). Never print a key, never put one in a chat, a file other than `.env`, or a commit. If a key reaches the
