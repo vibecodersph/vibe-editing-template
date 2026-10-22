@@ -1,0 +1,12 @@
+.env
+renders/
+video/snapshots/
+video/index.html
+video/assets/audio/
+node_modules/
+episodes/*/audio/stems/
+episodes/_*/
+*.log
+*.bak-*
+__pycache__/
+.venv/

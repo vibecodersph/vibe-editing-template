@@ -1,0 +1,22 @@
+{
+  "card": {
+    "logo": "assets/brand/vibe-coders-ph-logo-text-white.png",
+    "handle": "@yourhandle",
+    "credit": {
+      "label": "Made with",
+      "name": "Claude Kami template",
+      "handle": "vibecoders.ph",
+      "avatar": "assets/brand/vcph-star-512.png"
+    }
+  },
+  "voices": {
+    "buloy": {
+      "voice_id": "",
+      "note": "Pick a voice your ElevenLabs account can use through the API (the kami-setup skill helps), then put its Voice ID here."
+    },
+    "claude": {
+      "voice_id": "",
+      "note": "Pick a voice your ElevenLabs account can use through the API (the kami-setup skill helps), then put its Voice ID here."
+    }
+  }
+}

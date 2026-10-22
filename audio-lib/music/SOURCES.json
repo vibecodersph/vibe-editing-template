@@ -1,0 +1,12 @@
+[
+ {
+  "file": "lofi-bed.mp3",
+  "type": "music",
+  "catalog": "made from code",
+  "duration": 75.79,
+  "description": "Calm lo-fi bed, 76 BPM, rolled Rhodes-style chords, soft bass, kick, snare and swung hats, light vinyl crackle; no voice, no lead melody; 24 bars that loop.",
+  "fetched": "2026-10-22",
+  "source": "made from code: tools/synth_sounds.py lofi-bed",
+  "licence": "CC0-1.0"
+ }
+]

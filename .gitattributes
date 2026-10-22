@@ -1,0 +1,2 @@
+# No line-ending conversion anywhere: the tools write LF, and a checkout that rewrote files as CRLF would show them all as changed.
+* -text

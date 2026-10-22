@@ -1,0 +1,395 @@
+{
+  "title": "Legit Developer",
+  "set": "kwarto",
+  "cine": 1,
+  "mix": 2,
+  "gap": 0.12,
+  "formula": {
+    "sapatos": "kwarto-gabi",
+    "palusot": "legit-ba-ako",
+    "tanong": 1,
+    "amin": 4,
+    "bisita": "none",
+    "linya": [
+      14,
+      15
+    ],
+    "button": 19,
+    "caption": "Legit developer ka pa rin ba kung may AI kang katuwang?",
+    "gag": "a mug on the desk reading while True: kape(), seen only in close-ups, never read aloud",
+    "waived": {
+      "CK-07": "the example keeps its lines as written: the reply lands at about 9 s, just after the 8 s mark (waived when the example was made)"
+    }
+  },
+  "voices": {
+    "buloy": {
+      "voice_id": "TX3LPaxmHKxFdv7VOQHJ",
+      "note": "Liam, an ElevenLabs default voice (retired at the end of 2026): a record of what this example was voiced with"
+    },
+    "claude": {
+      "voice_id": "nPczCjzI2devNBz1zQrb",
+      "note": "Brian, an ElevenLabs default voice (retired at the end of 2026): a record of what this example was voiced with"
+    }
+  },
+  "open_shot": "hook",
+  "cine_shots": {
+    "duoC": {
+      "base": "duo:claude+laptop",
+      "at": 0.45
+    },
+    "hook": {
+      "type": "mcu",
+      "who": "buloy",
+      "eye": 0.36,
+      "push": 0.16
+    }
+  },
+  "hook_caption": "whole",
+  "end_message": [
+    "Bago magduda sa sarili,",
+    "mag-ship muna."
+  ],
+  "lines": [
+    {
+      "who": "buloy",
+      "shot": "hook",
+      "act": "b_ask",
+      "pre": 0.05,
+      "text": "Claude, legit developer ba ako?",
+      "say": "[nervous] Claude, legit developer ba ako?"
+    },
+    {
+      "who": "claude",
+      "shot": "pov:claude",
+      "act": "c_define",
+      "eyes": "neutral",
+      "text": "Define \"legit.\""
+    },
+    {
+      "who": "buloy",
+      "shot": "mcu:buloy",
+      "act": "b_explain",
+      "text": "Alam mo yun, yung developer na alam ang ginagawa."
+    },
+    {
+      "who": "claude",
+      "shot": "ecu:claude",
+      "act": "c_nope",
+      "eyes": "flat",
+      "text": "E di nope."
+    },
+    {
+      "who": "buloy",
+      "shot": "cu:buloy",
+      "act": "b_grabe",
+      "pre": 0.1,
+      "pre_shot": "cu:buloy",
+      "text": "Grabe ka namaaan.",
+      "say": "[sarcastic] Grabe ka namaaan."
+    },
+    {
+      "who": "claude",
+      "shot": "duoC",
+      "act": "c_search",
+      "eyes": "neutral",
+      "eye_cuts": [
+        {
+          "word": 10,
+          "eyes": "flat"
+        }
+      ],
+      "text": "Paulit-ulit mong sine-search this month kung paano mag-for loop sa Python.",
+      "cuts": [
+        {
+          "word": 5,
+          "shot": "cu:claude"
+        }
+      ]
+    },
+    {
+      "who": "buloy",
+      "shot": "cu:buloy",
+      "act": "b_defend",
+      "text": "Eh lahat naman nagse-search niyan eh."
+    },
+    {
+      "who": "claude",
+      "shot": "pov:claude",
+      "act": "c_tama",
+      "eyes": "wide",
+      "eye_cuts": [
+        {
+          "word": 1,
+          "eyes": "neutral"
+        }
+      ],
+      "text": "Tama! Yun ang point ko."
+    },
+    {
+      "who": "buloy",
+      "shot": "cu:buloy",
+      "act": "b_point",
+      "text": "What's your point?"
+    },
+    {
+      "who": "claude",
+      "shot": "cu:claude",
+      "act": "c_nobody",
+      "eyes": "soft",
+      "cuts": [
+        {
+          "word": 4,
+          "zoom": 1.2
+        }
+      ],
+      "text": "Na wala talagang nakakaalam. Karamihan pa dyan, nagkukunwari lang."
+    },
+    {
+      "who": "buloy",
+      "shot": "two",
+      "act": "b_online",
+      "text": "Parang ang confident kasi ng mga tao online.",
+      "cuts": [
+        {
+          "word": 3,
+          "shot": "mcu:buloy"
+        }
+      ]
+    },
+    {
+      "who": "claude",
+      "shot": "cu:claude",
+      "act": "c_impostor",
+      "eyes": "soft",
+      "text": "Nagkaka-impostor syndrome ka lang, boss. Kalma ka laaang."
+    },
+    {
+      "who": "buloy",
+      "shot": "duo:buloy+laptop",
+      "act": "b_broke",
+      "text": "Nasira ko na naman yung production this week eh.",
+      "cuts": [
+        {
+          "word": 5,
+          "shot": "mcu:buloy"
+        }
+      ]
+    },
+    {
+      "who": "claude",
+      "shot": "duoC",
+      "act": "c_fixed",
+      "eyes": "neutral",
+      "text": "Inayos mo rin naman, boss. Wala ngang nagturo sa 'yo.",
+      "cuts": [
+        {
+          "word": 4,
+          "shot": "cu:claude"
+        }
+      ]
+    },
+    {
+      "who": "buloy",
+      "shot": "cu:buloy",
+      "act": "b_legit",
+      "pre": 0.2,
+      "pre_shot": "cu:buloy",
+      "text": "So, legit na ba ako?",
+      "say": "[laughs] So, legit na ba ako?"
+    },
+    {
+      "who": "claude",
+      "shot": "pov:claude",
+      "act": "c_shipped",
+      "eyes": "soft",
+      "eye_cuts": [
+        {
+          "word": 7,
+          "eyes": "happy"
+        }
+      ],
+      "cuts": [
+        {
+          "word": 7,
+          "shot": "ecu:claude"
+        }
+      ],
+      "text": "May na-ship kang ginagamit ng mga tao. Goods na yuuun.",
+      "say": "[happy] May na-ship kang ginagamit ng mga tao. Goods na yuuun."
+    },
+    {
+      "who": "buloy",
+      "shot": "cu:buloy",
+      "cuts": [
+        {
+          "word": 0,
+          "shot": "ws",
+          "offset": 0.08
+        },
+        {
+          "word": 4,
+          "shot": "cu:buloy"
+        }
+      ],
+      "act": "b_thanks",
+      "pre": 0.25,
+      "pre_shot": "cu:buloy",
+      "text": "Okay, salamat, Claude ha. Dabest ka talaga.",
+      "say": "[happy] Okay, salamat, Claude ha. Dabest ka talaga."
+    },
+    {
+      "who": "claude",
+      "shot": "mcu:claude",
+      "act": "c_admit",
+      "eyes": "side-l",
+      "text": "Actually, may aaminin din ako, boss.",
+      "say": "[hesitant] Actually, may aaminin din ako, boss."
+    },
+    {
+      "who": "buloy",
+      "shot": "cu:buloy",
+      "act": "b_ano",
+      "text": "Ano yun, Claude?"
+    },
+    {
+      "who": "claude",
+      "shot": "cu:claude",
+      "act": "c_forloop",
+      "eyes": "sad",
+      "text": "Napa-search din ako eh. Nakalimutan ko rin kasi paano mag-for loop.",
+      "card": true,
+      "card_at": -1.0
+    }
+  ],
+  "audio": {
+    "music": {
+      "file": "audio-lib/music/lofi-bed.mp3",
+      "offset": 0.2,
+      "under_db": 16,
+      "stop": {
+        "line": 3,
+        "edge": "end",
+        "offset": 0.02
+      },
+      "resume": {
+        "line": 4,
+        "edge": "end",
+        "offset": 0.5
+      }
+    },
+    "ambience": {
+      "file": "audio-lib/sfx/amb-morning-fan-long.wav",
+      "under_db": 25
+    },
+    "sfx": [
+      {
+        "file": "audio-lib/sfx/stamp-low.mp3",
+        "at": {
+          "line": 3,
+          "word": 2,
+          "offset": 0.0
+        },
+        "under_db": 9,
+        "dur": 0.8,
+        "fade": 0.2
+      },
+      {
+        "file": "audio-lib/sfx/scratch-stop.mp3",
+        "at": {
+          "line": 3,
+          "edge": "end",
+          "offset": 0.08
+        },
+        "under_db": 8
+      },
+      {
+        "file": "audio-lib/sfx/womp.mp3",
+        "at": {
+          "line": 4,
+          "word": 2,
+          "offset": 0.0
+        },
+        "under_db": 12,
+        "dur": 1.2,
+        "fade": 0.4
+      },
+      {
+        "file": "audio-lib/sfx/ping-soft.mp3",
+        "at": {
+          "line": 7,
+          "word": 0,
+          "offset": 0.0
+        },
+        "under_db": 12
+      },
+      {
+        "file": "audio-lib/sfx/whoosh-air.mp3",
+        "at": {
+          "line": 9,
+          "word": 4,
+          "offset": 0.0
+        },
+        "under_db": 14
+      },
+      {
+        "file": "audio-lib/sfx/error-buzz.mp3",
+        "at": {
+          "line": 12,
+          "word": 5,
+          "offset": 0.0
+        },
+        "under_db": 11
+      },
+      {
+        "file": "audio-lib/sfx/chime-up.mp3",
+        "at": {
+          "line": 13,
+          "word": 0,
+          "offset": 0.0
+        },
+        "under_db": 13,
+        "dur": 1.0,
+        "fade": 0.3
+      },
+      {
+        "file": "audio-lib/sfx/sparkle-dust.mp3",
+        "at": {
+          "line": 15,
+          "word": 9,
+          "offset": 0.0
+        },
+        "under_db": 13,
+        "dur": 1.2,
+        "fade": 0.3
+      },
+      {
+        "file": "audio-lib/sfx/claps-small.mp3",
+        "at": {
+          "line": 16,
+          "word": 4,
+          "offset": 0.0
+        },
+        "under_db": 14,
+        "dur": 1.4,
+        "fade": 0.4
+      },
+      {
+        "file": "audio-lib/sfx/key-tap.mp3",
+        "at": {
+          "line": 19,
+          "offset": 0.0
+        },
+        "under_db": 14
+      },
+      {
+        "file": "audio-lib/sfx/ba-dum-tss.mp3",
+        "at": {
+          "line": 19,
+          "edge": "end",
+          "offset": -0.1
+        },
+        "under_db": 8
+      }
+    ]
+  }
+}

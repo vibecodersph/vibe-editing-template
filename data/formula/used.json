@@ -1,0 +1,6 @@
+{
+  "about": "Pairs (shoes + shortcut) already made, so tools/ideas.py never offers them again. The example episode is listed here; every episode you make is read from its own script.json 'formula' block, so nothing needs to be added to this file.",
+  "episodes": [
+    {"episode": "00-legit-developer", "sapatos": "kwarto-gabi", "palusot": "legit-ba-ako"}
+  ]
+}

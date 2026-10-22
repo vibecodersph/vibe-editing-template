@@ -1,0 +1,106 @@
+{
+ "set": "kwarto",
+ "cine": 1,
+ "open_shot": "pov:claude",
+ "cine_shots": {
+  "read": {
+   "base": "cu:buloy",
+   "at": 0.7
+  },
+  "light": {
+   "base": "ots:claude",
+   "at": 1.2
+  }
+ },
+ "lines": [
+  {
+   "who": "claude",
+   "text": "Marunong ka pa bang mag-code nang walang AI?",
+   "act": "c_ask",
+   "shot": "pov:claude",
+   "pre": 0.2,
+   "eyes": "neutral"
+  },
+  {
+   "who": "buloy",
+   "text": "Paano nga ulit mag-for loop?",
+   "act": "b_blank",
+   "shot": "mcu:buloy",
+   "pre": 1.3,
+   "pre_shot": "duo:buloy+laptop",
+   "pre_anchor": "k_screen",
+   "look": "screen"
+  },
+  {
+   "who": "buloy",
+   "text": "Eh ano'ng kaya mong gawin?!",
+   "act": "b_what",
+   "shot": "two",
+   "eyes": "sad"
+  },
+  {
+   "who": "nanay",
+   "text": "[shouting] Buloy! 'Yung libro mo, nasa ilalim ng laptop!",
+   "act": "m_book",
+   "shot": "mcu:buloy",
+   "cuts": [
+    {
+     "word": 4,
+     "shot": "insert:book",
+     "anchor": "k_book"
+    }
+   ],
+   "eyes": "wide"
+  },
+  {
+   "who": "claude",
+   "text": "Ilaw lang ang kaya ko, boss.",
+   "act": "c_light",
+   "shot": "light",
+   "eyes": "soft"
+  },
+  {
+   "who": "buloy",
+   "text": "For... i... in... range.",
+   "act": "b_sound",
+   "shot": "duo:buloy+bookopen",
+   "shot_anchor": "k_page",
+   "cuts": [
+    {
+     "word": 2,
+     "shot": "cu:buloy"
+    }
+   ],
+   "eyes": "neutral",
+   "look": "down"
+  },
+  {
+   "who": "claude",
+   "text": "May WiFi na. Tapos ko na ang code, boss.",
+   "act": "c_done",
+   "shot": "cu:claude",
+   "pre": 1.0,
+   "pre_shot": "ws",
+   "eyes": "happy",
+   "eye_cuts": [
+    {
+     "word": 4,
+     "eyes": "dot"
+    }
+   ]
+  },
+  {
+   "who": "buloy",
+   "text": "Sandali. Nasa while loop na ako.",
+   "act": "b_stay",
+   "shot": "cu:buloy",
+   "cuts": [
+    {
+     "word": 3,
+     "zoom": 1.25
+    }
+   ],
+   "eyes": "soft"
+  }
+ ]
+}

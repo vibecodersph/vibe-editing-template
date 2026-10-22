@@ -1,0 +1,131 @@
+[
+ {
+  "file": "bulb-hum.mp3",
+  "type": "sound_effects",
+  "query": "60 Hz mains harmonics with a slow wander, one faint flicker and a thin 2 to 3 kHz buzz",
+  "catalog": "synthesized",
+  "duration": 8.5,
+  "fetched": "2026-10-07",
+  "source": "Synthesized with numpy for Claude Kami episode 02 (the ElevenLabs sound-generation result was at the noise floor); no external material",
+  "licence": "CC0-1.0"
+ },
+ {
+  "file": "amb-morning-fan-long.wav",
+  "type": "ambience",
+  "catalog": "made here",
+  "duration": 60.0,
+  "fetched": "2026-10-09",
+  "source": "ffmpeg: brown noise low-passed at 650 Hz (the room's air), band-passed pink noise and a 100 Hz hum under a 7 Hz tremolo (a stand fan turning). Made for Claude Kami episode 10 because the generated amb-morning-room.mp3 came back as a rooster and a bang, not a steady room tone; no outside material",
+  "licence": "CC0-1.0"
+ },
+ {
+  "file": "stamp-low.mp3",
+  "type": "sound_effects",
+  "catalog": "made from code",
+  "duration": 0.8,
+  "description": "A heavy rubber stamp thud: a low body with a short slap, no ring.",
+  "fetched": "2026-10-22",
+  "source": "made from code: tools/synth_sounds.py stamp-low",
+  "licence": "CC0-1.0"
+ },
+ {
+  "file": "scratch-stop.mp3",
+  "type": "sound_effects",
+  "catalog": "made from code",
+  "duration": 0.9,
+  "description": "A record scratched back and forth that winds down to a stop.",
+  "fetched": "2026-10-22",
+  "source": "made from code: tools/synth_sounds.py scratch-stop",
+  "licence": "CC0-1.0"
+ },
+ {
+  "file": "womp.mp3",
+  "type": "sound_effects",
+  "catalog": "made from code",
+  "duration": 1.4,
+  "description": "A sad two-note descending trombone-style womp womp.",
+  "fetched": "2026-10-22",
+  "source": "made from code: tools/synth_sounds.py womp",
+  "licence": "CC0-1.0"
+ },
+ {
+  "file": "ping-soft.mp3",
+  "type": "sound_effects",
+  "catalog": "made from code",
+  "duration": 0.9,
+  "description": "A bright short notification ping with a soft ring.",
+  "fetched": "2026-10-22",
+  "source": "made from code: tools/synth_sounds.py ping-soft",
+  "licence": "CC0-1.0"
+ },
+ {
+  "file": "whoosh-air.mp3",
+  "type": "sound_effects",
+  "catalog": "made from code",
+  "duration": 0.6,
+  "description": "A quick airy whoosh for a cut, fast in and a soft tail.",
+  "fetched": "2026-10-22",
+  "source": "made from code: tools/synth_sounds.py whoosh-air",
+  "licence": "CC0-1.0"
+ },
+ {
+  "file": "error-buzz.mp3",
+  "type": "sound_effects",
+  "catalog": "made from code",
+  "duration": 0.55,
+  "description": "Two short low UI error buzzes, the second a little lower.",
+  "fetched": "2026-10-22",
+  "source": "made from code: tools/synth_sounds.py error-buzz",
+  "licence": "CC0-1.0"
+ },
+ {
+  "file": "chime-up.mp3",
+  "type": "sound_effects",
+  "catalog": "made from code",
+  "duration": 1.0,
+  "description": "A gentle rising two-note chime.",
+  "fetched": "2026-10-22",
+  "source": "made from code: tools/synth_sounds.py chime-up",
+  "licence": "CC0-1.0"
+ },
+ {
+  "file": "sparkle-dust.mp3",
+  "type": "sound_effects",
+  "catalog": "made from code",
+  "duration": 1.2,
+  "description": "A short magical sparkle: many tiny high bell tones thinning out.",
+  "fetched": "2026-10-22",
+  "source": "made from code: tools/synth_sounds.py sparkle-dust",
+  "licence": "CC0-1.0"
+ },
+ {
+  "file": "claps-small.mp3",
+  "type": "sound_effects",
+  "catalog": "made from code",
+  "duration": 1.6,
+  "description": "A few people clapping, with a small room tail.",
+  "fetched": "2026-10-22",
+  "source": "made from code: tools/synth_sounds.py claps-small",
+  "licence": "CC0-1.0"
+ },
+ {
+  "file": "key-tap.mp3",
+  "type": "sound_effects",
+  "catalog": "made from code",
+  "duration": 0.14,
+  "description": "One laptop key tap: a short click over a soft thock.",
+  "fetched": "2026-10-22",
+  "source": "made from code: tools/synth_sounds.py key-tap",
+  "licence": "CC0-1.0"
+ },
+ {
+  "file": "ba-dum-tss.mp3",
+  "type": "sound_effects",
+  "catalog": "made from code",
+  "duration": 1.4,
+  "description": "A rimshot: two drum hits then a cymbal.",
+  "fetched": "2026-10-22",
+  "source": "made from code: tools/synth_sounds.py ba-dum-tss",
+  "licence": "CC0-1.0"
+ }
+]
