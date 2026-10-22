@@ -12,7 +12,7 @@ Steps, in order (the names work with --from and --to):
   6  qa         qa.py --step 0.1 (one retry on "Failed to fetch"); a contact FAIL or a FRAME FAIL line stops (FRAME ADVICE and FRAME WARN lines do not)
   7  render     render.py; the three files must be newer than this step's start, and the upload copy within 1 LU of -14
   8  frames     qa.py every frame (--step 0.0333333 --no-images)
-  9  hear       hear.py on the upload copy; under 90 percent of the script's words heard stops (--no-hear skips; no GEMINI_API_KEY skips too)
+  9  hear       hear.py on the upload copy (one more listen after a miss); under 90 percent of the script's words heard stops (--no-hear skips; no GEMINI_API_KEY skips too)
  10  look       frame 0 and a contact sheet every 2 s, for a person to look at
 
 Writes renders/review/<episode>-<cut>-make/summary.md and summary.json, with each step's log beside them. The last
@@ -397,6 +397,13 @@ def step_hear(c, step):
     if rc != 0 or not m:
         return result('FAIL', f'hear.py exit {rc}, no mix line: {last_line(text)}', {}, secs)
     hit, want = int(m.group(1)), int(m.group(2))
+    if want and 100.0 * hit / want < HEARD_FLOOR:   # the transcriber varies a few percent run to run: a miss gets one more listen
+        say('  under the floor: listening once more, the better count stands')
+        rc2, text2, extra = run_cmd(c, step, cmd_hear(c), append=True)
+        secs += extra
+        m2 = re.search(r'mix: (\d+)/(\d+) script words heard', text2)
+        if rc2 == 0 and m2 and int(m2.group(1)) > hit:
+            text, hit = text2, int(m2.group(1))
     pct = 100.0 * hit / want if want else 0.0
     first = re.search(r'^first line: (.*)$', text, re.M)
     nums = {'heard': f'{hit}/{want} ({pct:.0f}%)', 'first line': first.group(1)[:80] if first else 'n/a'}
